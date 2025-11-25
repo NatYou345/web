@@ -13,7 +13,7 @@ gem 'middleman-livereload', '~> 3.1.0'
 
 # Blogging plugin
 gem 'middleman-blog'
-gem 'nokogiri' # for summaries
+gem 'nokogiri', '>= 1.18.9' # for summaries, updated for security
 gem 'builder'
 
 # For mapping redirects
@@ -33,4 +33,4 @@ gem 'asciidoctor', '~> 1.5.0'
 gem 'asciidoctor-pdf', github: 'Bitnami/asciidoctor-pdf'
 
 # JS engine
-gem 'therubyracer'
+gem 'mini_racer'

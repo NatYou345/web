@@ -89,7 +89,6 @@ GEM
     i18n (0.6.11)
     json (2.7.2)
     kramdown (1.4.1)
-    libv8 (3.16.14.19)
     listen (2.7.9)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -113,12 +112,13 @@ GEM
       sprockets-helpers (~> 1.1.0)
       sprockets-sass (~> 1.2.0)
     mini_portile2 (2.8.7)
+    mini_racer (0.16.0)
     minitest (5.4.0)
     multi_json (1.10.1)
     net-sftp (4.0.0)
       net-ssh (>= 5.0.0, < 8.0.0)
     net-ssh (7.2.3)
-    nokogiri (1.16.7)
+    nokogiri (1.18.9)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     padrino-helpers (0.12.2)
@@ -154,7 +154,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    ref (2.0.0)
     ruby-rc4 (0.1.5)
     rubyzip (2.3.2)
     sass (3.2.19)
@@ -172,9 +171,6 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     temple (0.6.8)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -200,9 +196,9 @@ DEPENDENCIES
   middleman-blog
   middleman-deploy
   middleman-livereload (~> 3.1.0)
-  nokogiri
+  mini_racer
+  nokogiri (>= 1.18.9)
   rubyzip (>= 1.0.0)
-  therubyracer
   wdm (~> 0.1.0)
 
 BUNDLED WITH

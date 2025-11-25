@@ -12,10 +12,13 @@ RUN apt-get update && apt-get install -y \
 
 # Ruby base template
 COPY Gemfile* /app/
-COPY vendor/cache /app/vendor/cache
 WORKDIR /app
 
-# Install all the dependencies
-RUN gem install bundler --version 2.4.22 && bundle install
+# Install Bundler v2 and all dependencies
+# BUNDLE_IGNORE_MESSAGES suppresses bundler version warnings from old gems
+ENV BUNDLE_SILENCE_DEPRECATIONS=true
+RUN gem install bundler --version 2.4.22 && \
+    bundle config set --local deployment 'false' && \
+    bundle install
 
 CMD ["irb"]
