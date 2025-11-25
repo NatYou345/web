@@ -12,7 +12,6 @@ RUN apt-get update && apt-get install -y \
 
 # Ruby base template
 COPY Gemfile* /app/
-COPY vendor/cache /app/vendor/cache
 WORKDIR /app
 
 # Install all the dependencies

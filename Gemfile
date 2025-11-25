@@ -33,4 +33,4 @@ gem 'asciidoctor', '~> 1.5.0'
 gem 'asciidoctor-pdf', github: 'Bitnami/asciidoctor-pdf'
 
 # JS engine
-gem 'therubyracer'
+gem 'mini_racer'
